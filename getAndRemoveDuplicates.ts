@@ -1,5 +1,5 @@
 import { getDuplicates } from '@writetome51/array-get-duplicates/getDuplicates';
-import { removeFirstOfEach } 
+import { removeFirstOfEach }
 	from '@writetome51/array-remove-all-of-first-of/removeFirstOf_removeFirstOfEach';
 
 // Returns and removes every extra instance of each array item.

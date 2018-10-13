@@ -1,7 +1,7 @@
 {
-  "name": "@writetome51/array-get-and-removers-filtered-results-duplicates",
+  "name": "@writetome51/array-get-and-remove-duplicates",
   "version": "1.0.0",
-  "description": "array-handling functions that remove and return data from the array",
+  "description": "Removes and returns every extra instance of each array item",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,9 @@
   ],
   "author": "Steve Thompson",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "@writetome51/arrays-match": "latest"
+  },
   "dependencies": {
     "@writetome51/array-get-duplicates": "latest",
     "@writetome51/array-remove-all-of-first-of": "latest"
