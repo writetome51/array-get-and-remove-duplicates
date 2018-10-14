@@ -2,14 +2,18 @@
   "name": "@writetome51/array-get-and-remove-duplicates",
   "version": "1.0.0",
   "description": "Removes and returns every extra instance of each array item",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "array",
     "manipulation",
-    "remove"
+    "remove",
+    "duplicates",
+    "duplicate",
+    "item",
+    "items"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
