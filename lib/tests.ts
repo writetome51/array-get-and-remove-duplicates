@@ -1,4 +1,4 @@
-import { getAndRemoveDuplicates } from './lib/getAndRemoveDuplicates';
+import { getAndRemoveDuplicates } from './getAndRemoveDuplicates';
 import { arraysMatch } from '@writetome51/arrays-match/arraysMatch';
 
 
@@ -53,3 +53,9 @@ else console.log('test 7 failed');
 if (arraysMatch(arr, [[1, 2, 3], 10, 2, 'h', 1, 5, 6, false]))
 	console.log('test 8 passed');
 else console.log('test 8 failed');
+
+
+// Test 9: if there are no duplicates, make sure it still returns empty array:
+duplicates = getAndRemoveDuplicates(arr);
+if (Array.isArray(duplicates) && duplicates.length === 0) console.log('test 9 passed');
+else console.log('test 9 failed');
