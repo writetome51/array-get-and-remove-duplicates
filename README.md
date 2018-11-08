@@ -1,22 +1,23 @@
-This function removes and returns every extra instance of each array item.
-It does this by first finding all items that have duplicates, and then removing the 
-first instance of each of those items until there's only one instance left.
+import {getAndRemoveDuplicates} from '@writetome51/array-get-and-remove-duplicates';
 
-For example this array:
+getAndRemoveDuplicates(array): any[]
 
- [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 1, 2, 3];
- 
- Once processed by the function, will be left like this:
- 
- [ 4, 5, 6, 7, 8, 9, 10, 1, 2, 3 ]
- 
- Things may seem out of order, so if you want things to appear in order, 
- it would be best to sort the entire array before you pass it into this 
- function.  If the array in the above example had been sorted first to 
- look like this:
- 
- [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 10]
- 
- Then after being processed by the function it will look like this:
- 
- [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+This function removes and returns every extra instance of each array item.  
+NOTICE:  The function will error if array contains an object.  
+
+Examples:
+
+let arr = [1, 2, 3, 4, 1, 2, 3, 4, 5, 2];  
+let duplicates = getAndRemoveDuplicates(arr);  
+// arr is now [1,2,3,4,5].  
+// duplicates is now [1,2,2,3,4]  
+// (In returned duplicates, identical items are always side-by-side)
+
+let arr = [1, 2, ['a','b'], 9, 1, 2, 3, 4, ['a','b'], 1, 9, ['a','b']];  
+let duplicates = getAndRemoveDuplicates(arr);  
+// arr is now [1, 2, ['a','b'], 9, 3, 4]  
+// duplicates is now [1, 1, 2, ['a','b'], ['a','b'], 9]
+
+// This will trigger error, because arr contains object:  
+let arr = [1, 2, {prop:1}, 2, 3, 4];  
+getAndRemoveDuplicates(arr); // Error!
