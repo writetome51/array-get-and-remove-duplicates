@@ -3,12 +3,18 @@ import { arraysMatch } from '@writetome51/arrays-match';
 
 
 let arr: any[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 1, 2, 3];
+let arrCopy = arr;
 
 
 // Test 1: Make sure it gets duplicate numbers:
 let duplicates = getAndRemoveDuplicates(arr);
 if (arraysMatch(duplicates, [1, 1, 2, 2, 3, 3])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
+
+
+// Test 1A: Make sure the memory reference wasnt broken:
+if (arraysMatch(arr, arrCopy)) console.log('test 1A passed');
+else console.log('test 1A FAILED');
 
 
 // Test 2: make sure those items were removed from array:
@@ -31,9 +37,15 @@ else console.log('test 4 FAILED');
 
 // Test 5: Make sure it gets duplicate arrays:
 arr = [[1, 2, 3], true, 10, false, 2, 'h', 1, 5, [1, 2, 3]];
+arrCopy = arr;
 duplicates = getAndRemoveDuplicates(arr);
 if (arraysMatch(duplicates, [[1, 2, 3]])) console.log('test 5 passed');
 else console.log('test 5 FAILED');
+
+
+// Test 5A: Make sure the memory reference wasnt broken:
+if (arraysMatch(arr, arrCopy)) console.log('test 5A passed');
+else console.log('test 5A FAILED');
 
 
 // Test 6: make sure those items were removed from array:
