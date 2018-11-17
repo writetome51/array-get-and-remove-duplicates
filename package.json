@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-get-and-remove-duplicates",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Removes and returns every extra instance of each array item",
   "main": "index.js",
   "scripts": {
