@@ -1,7 +1,7 @@
-import { getDuplicates } from '@writetome51/array-get-duplicates/getDuplicates';
-import { removeFirstOfEach } from '@writetome51/array-remove-all-of-first-of';
 import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
 import { errorIfNotPopulatedArray } from 'error-if-not-populated-array';
+import { getDuplicates } from '@writetome51/array-get-duplicates';
+import { removeFirstOfEach } from '@writetome51/array-remove-all-of-first-of';
 
 
 // Removes and returns every extra instance of each array item.
