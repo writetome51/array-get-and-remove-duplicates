@@ -1,12 +1,11 @@
-import {getAndRemoveDuplicates} from '@writetome51/array-get-and-remove-duplicates';
+# getAndRemoveDuplicates(array): any[]
 
-getAndRemoveDuplicates(array): any[]
+Removes and returns every extra instance of unique items in `array`.   
+NOTICE:  The function will error if `array` contains an object.  
+'object' does not include arrays.  Arrays are OK.
 
-This function removes and returns every extra instance of each array item.  
-NOTICE:  The function will error if array contains an object.  
-
-Examples:
-
+## Examples
+```
 let arr = [1, 2, 3, 4, 1, 2, 3, 4, 5, 2];  
 let duplicates = getAndRemoveDuplicates(arr);  
 // arr is now [1,2,3,4,5].  
@@ -21,3 +20,17 @@ let duplicates = getAndRemoveDuplicates(arr);
 // This will trigger error, because arr contains object:  
 let arr = [1, 2, {prop:1}, 2, 3, 4];  
 getAndRemoveDuplicates(arr); // Error!
+```
+
+
+## Installation
+`npm install  @writetome51/array-get-and-remove-duplicates`
+
+## Loading
+```
+// If using TypeScript:
+import {getAndRemoveDuplicates} from '@writetome51/array-get-and-remove-duplicates';
+// If using ES5 JavaScript:
+var getAndRemoveDuplicates = 
+	require('@writetome51/array-get-and-remove-duplicates').getAndRemoveDuplicates;
+```

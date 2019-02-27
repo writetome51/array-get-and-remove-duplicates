@@ -1,10 +1,11 @@
 {
   "name": "@writetome51/array-get-and-remove-duplicates",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Removes and returns every extra instance of each array item",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -26,12 +27,12 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "devDependencies": {
-    "@writetome51/arrays-match": "~1.0.2"
+    "@writetome51/arrays-match": "~1.0.5"
   },
   "dependencies": {
-    "basic-data-handling": "~1.0.13",
-    "error-if-not-populated-array": "~1.0.0",
-    "@writetome51/array-get-duplicates": "~1.1.0",
-    "@writetome51/array-remove-all-of-first-of": "~1.0.4"
+    "basic-data-handling": "~1.0.15",
+    "error-if-not-populated-array": "~1.0.1",
+    "@writetome51/array-get-duplicates": "~1.1.2",
+    "@writetome51/array-remove-all-of-first-of": "~1.0.6"
   }
 }

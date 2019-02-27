@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var getAndRemoveDuplicates_1 = require("./getAndRemoveDuplicates");
+var index_1 = require("./index");
 var arrays_match_1 = require("@writetome51/arrays-match");
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 1, 2, 3];
 var arrCopy = arr;
 // Test 1: Make sure it gets duplicate numbers:
-var duplicates = getAndRemoveDuplicates_1.getAndRemoveDuplicates(arr);
+var duplicates = index_1.getAndRemoveDuplicates(arr);
 if (arrays_match_1.arraysMatch(duplicates, [1, 1, 2, 2, 3, 3]))
     console.log('test 1 passed');
 else
@@ -22,7 +22,7 @@ else
     console.log('test 2 FAILED');
 // Test 3: Make sure it gets duplicate strings:
 arr = ['', true, 10, false, '', 2, 'h', 1, 5, 'h', 'mertyujkl;', 20, 'mertyujkl;'];
-duplicates = getAndRemoveDuplicates_1.getAndRemoveDuplicates(arr);
+duplicates = index_1.getAndRemoveDuplicates(arr);
 if (arrays_match_1.arraysMatch(duplicates, ['', 'h', 'mertyujkl;']))
     console.log('test 3 passed');
 else
@@ -35,7 +35,7 @@ else
 // Test 5: Make sure it gets duplicate arrays:
 arr = [[1, 2, 3], true, 10, false, 2, 'h', 1, 5, [1, 2, 3]];
 arrCopy = arr;
-duplicates = getAndRemoveDuplicates_1.getAndRemoveDuplicates(arr);
+duplicates = index_1.getAndRemoveDuplicates(arr);
 if (arrays_match_1.arraysMatch(duplicates, [[1, 2, 3]]))
     console.log('test 5 passed');
 else
@@ -52,7 +52,7 @@ else
     console.log('test 6 FAILED');
 // Test 7: Make sure it gets duplicate booleans:
 arr = [true, [1, 2, 3], false, 2, 'h', true, 6, false];
-duplicates = getAndRemoveDuplicates_1.getAndRemoveDuplicates(arr);
+duplicates = index_1.getAndRemoveDuplicates(arr);
 if (arrays_match_1.arraysMatch(duplicates, [true, false]))
     console.log('test 7 passed');
 else
@@ -63,7 +63,7 @@ if (arrays_match_1.arraysMatch(arr, [true, [1, 2, 3], false, 2, 'h', 6]))
 else
     console.log('test 8 FAILED');
 // Test 9: if there are no duplicates, make sure it still returns empty array:
-duplicates = getAndRemoveDuplicates_1.getAndRemoveDuplicates(arr);
+duplicates = index_1.getAndRemoveDuplicates(arr);
 if (Array.isArray(duplicates) && duplicates.length === 0)
     console.log('test 9 passed');
 else
@@ -71,7 +71,7 @@ else
 // Test 10: should trigger error if array is empty:
 var errorTriggered = false;
 try {
-    getAndRemoveDuplicates_1.getAndRemoveDuplicates([]);
+    index_1.getAndRemoveDuplicates([]);
 }
 catch (e) {
     errorTriggered = true;
@@ -83,7 +83,7 @@ else
 // Test 11: should trigger error if array is empty:
 errorTriggered = false;
 try {
-    getAndRemoveDuplicates_1.getAndRemoveDuplicates('hello there');
+    index_1.getAndRemoveDuplicates('hello there');
 }
 catch (e) {
     errorTriggered = true;
@@ -95,7 +95,7 @@ else
 // Test 12: should trigger error if array contains object:
 errorTriggered = false;
 try {
-    getAndRemoveDuplicates_1.getAndRemoveDuplicates([1, '', false, {}]);
+    index_1.getAndRemoveDuplicates([1, '', false, {}]);
 }
 catch (e) {
     errorTriggered = true;
